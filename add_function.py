@@ -5,12 +5,13 @@ from datetime import datetime
 from time_function import time_delta
 import csv
 
+
 def add():
 	sage_add = Tk()
 	sage_add.title("Add Mission")
-	sage_add.wm_iconbitmap('data/airplane.ico')
-
+	#sage_add.wm_iconbitmap('data/airplane.ico')
 	
+	#Submit Mission
 	def submit_mission():
 
 		totime = totime_h.get()+totime_m.get()
@@ -31,7 +32,7 @@ def add():
 
 
 
-		filename = "example.csv"
+		filename = "C:\\Users\\jivib\\OneDrive\\Documents\\Work\\Projects\\PostMsn\\example.csv"
 		output_file = open(filename, 'a', newline='')
 		output_writer = csv.writer(output_file)
 		'''
@@ -477,12 +478,7 @@ def add():
 	submit_button = Button(remarks_frame, text="Submit Mission", command=submit_mission)
 	submit_button.grid(row=1, column=2, columnspan=2, padx=5, pady=5)
 
-
+	#Main Loop Call
+	sage_add.mainloop()
 	
 
-
-
-
-
-
-	sage_add.mainloop()

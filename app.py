@@ -7,7 +7,7 @@ from sit_rep_function import create_sit_rep
 
 root= Tk()
 root.title("Sage Brush")
-root.wm_iconbitmap('data/bush.ico')
+#root.wm_iconbitmap('data/bush.ico')
 root.configure(background='blue')
 
 

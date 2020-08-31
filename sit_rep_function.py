@@ -10,7 +10,7 @@ import pandas as pd
 def create_sit_rep():
     sage_sitrep = Tk()
     sage_sitrep.title("Situation Report")
-    sage_sitrep.wm_iconbitmap('data/airplane.ico')
+    #sage_sitrep.wm_iconbitmap('data/airplane.ico')
 
     def produce_sit_rep():
 
@@ -304,9 +304,34 @@ def create_sit_rep():
 
     #ENTRY FRAME
     entry_frame = Frame(sage_sitrep)
-    entry_frame.grid(row=1,column=0)
+	entry_frame.grid(row=1,column=0)
+    
+	#Weeks Array
+    week_label = []
+    week_entryInit = []
+    to_label = []
+    week_entryEnd = []
+	
+	
+    w = 0
+	
+    while w < 5:
+        week_label[w] = Label(entry_frame,text="Week " + str(w + 1) + " Dates")
+        week_label[w].grid(row=w,column=0, padx=5, pady=5)
 
-    #WEEK 1
+        week_entry[w] = DateEntry(entry_frame)
+        week_entry[w].grid(row=w,column=1, padx=5, pady=5)
+
+        to_label[w] = Label(entry_frame,text=" TO ")
+        to_label[w].grid(row=w,column=2,padx=5, pady=5)
+
+        week_entry[w] = DateEntry(entry_frame)
+        week_entry[w].grid(row=w,column=3,padx=5, pady=5)
+		
+        w += 1
+		
+
+    """#WEEK 1
     week1_label = Label(entry_frame,text="Week 1 Dates")
     week1_label.grid(row=0,column=0, padx=5, pady=5)
 
@@ -369,7 +394,7 @@ def create_sit_rep():
     to_label.grid(row=4,column=2,padx=5, pady=5)
 
     week5_2entry = DateEntry(entry_frame)
-    week5_2entry.grid(row=4,column=3,padx=5, pady=5)
+    week5_2entry.grid(row=4,column=3,padx=5, pady=5)"""
 
 
 
